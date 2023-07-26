@@ -1,45 +1,33 @@
 import 'dart:convert';
 
-import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 import 'package:teste_mobile_leonardo_carvalho/src/models/produtor_model.dart';
 
 class ProdutorRepository{
-  // final dio = Dio();
-  // final url = 'file:///C:/Users/Leonardo/Documents/testeMobile_LeonardoCarvalho/produtores.json';
 
-  //Future<List<ProdutorModel>> fetchProdutor() async {
-  //   var response = await rootBundle.loadString('assets/produtores.json');
-  //   print(response);
-  //   final List<dynamic> jsonList = jsonDecode(response); // Decodifica a string JSON em uma lista de Mapas.
-  //
-  //   List<ProdutorModel> produtores = [];
-  //
-  //   for (var json in jsonList) {
-  //     final produtor = ProdutorModel.fromJson(json);
-  //     produtores.add(produtor);
-  //   }
-  //
-  //   return produtores;
-  // }
-
+  // Guarda o caminho do arquivo JSON que estah localizado na pasta assets
+  final url = 'assets/produtores.json';
 
   Future<List<ProdutorModel>> fetchProdutor() async {
-    var jsonFile = await rootBundle.loadString('assets/produtores.json');
-    //print(response);
-    //dynamic jsonData = jsonDecode(response);
-    List<dynamic> listaProdutores = json.encode(jsonFile) as List;
-    //List a = jsonList as List;
-    //final list = response as List;
-    //String jsonString = await rootBundle.loadString('assets/data.json');
-    //List<ProdutorModel> produtores = [];
 
+    // Busca e armazena o conteudo do arquivo JSON
+    String jsonFile = await rootBundle.loadString(url);
 
-    // for(var json in listaProdutores){
-    //   final produtor = ProdutorModel.fromJson(json);
-    //   produtores.add(produtor);
-    // }
+    // Tranformando o arquivo de JSON para MAP
+    final Map<String, dynamic> jsonData = json.decode(jsonFile);
 
-    return listaProdutores.map((c) => ProdutorModel.fromJson(c)).toList();
+    /* Buscando dados contidos no MAP passando a Key('produtores') para poder ter acesso aos
+       dados array e armazenando eles em uma lista */
+    List<dynamic> produtoresList = jsonData['produtores'];
+
+    List<ProdutorModel> produtores = [];
+
+    // populando a lista 'produtores' com os dados obtidos na 'list'
+    for (var json in produtoresList) {
+      final produtor = ProdutorModel.fromJson(json);
+      produtores.add(produtor);
+    }
+
+    return produtores;
   }
 }

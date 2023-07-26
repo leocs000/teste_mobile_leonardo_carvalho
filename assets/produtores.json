@@ -1,0 +1,51 @@
+{
+"produtores": [
+	{
+		"idProdutor" : 1,
+		"registroIndividual" : "353.920.370-20",
+		"nomeProdutor" : "Manuel Theo da Mata",
+		"status" : 1
+	},
+	{
+		"idProdutor" : 2,
+		"registroIndividual" : "464.280.050-69",
+		"nomeProdutor" : "Petterson Abade",
+		"status" : 0
+	},
+	{
+		"idProdutor" : 3,
+		"registroIndividual" : "497.595.602-08",
+		"nomeProdutor" : "Evelyn Camila Raquel Ramos",
+		"status" : 1
+	},
+	{
+		"idProdutor" : 4,
+		"registroIndividual" : "307.878.410-05",
+		"nomeProdutor" : "Benjamin Bruno Nogueira",
+		"status" : 1
+	},
+	{
+		"idProdutor" : 5,
+		"registroIndividual" : "029.958.740-10",
+		"nomeProdutor" : null,
+		"status" : 0
+	},
+	{
+		"idProdutor" : 6,
+		"registroIndividual" : "224.963.380-07",
+		"nomeProdutor" : "Renan Fábio Kaique Porto",
+		"status" : 1
+	},
+	{
+		"idProdutor" : 7,
+		"registroIndividual" : "",
+		"nomeProdutor" : "Daniel Vitor",
+		"status" : 1
+	},
+	{
+		"idProdutor" : 8,
+		"registroIndividual" : "078.573.730-87",
+		"nomeProdutor" : "Valentina Esther Jéssica Alves",
+		"status" : 1
+	}
+]}

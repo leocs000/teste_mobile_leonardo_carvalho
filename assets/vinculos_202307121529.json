@@ -1,0 +1,108 @@
+{
+"vinculos": [
+	{
+		"idVinculo" : 1,
+		"idPropriedade" : 9,
+		"idProdutor" : 4
+	},
+	{
+		"idVinculo" : 2,
+		"idPropriedade" : 1,
+		"idProdutor" : 1
+	},
+	{
+		"idVinculo" : 3,
+		"idPropriedade" : 3,
+		"idProdutor" : 8
+	},
+	{
+		"idVinculo" : 4,
+		"idPropriedade" : 2,
+		"idProdutor" : 4
+	},
+	{
+		"idVinculo" : 5,
+		"idPropriedade" : 4,
+		"idProdutor" : 1
+	},
+	{
+		"idVinculo" : 6,
+		"idPropriedade" : 4,
+		"idProdutor" : 3
+	},
+	{
+		"idVinculo" : 7,
+		"idPropriedade" : 4,
+		"idProdutor" : 2
+	},
+	{
+		"idVinculo" : 8,
+		"idPropriedade" : 5,
+		"idProdutor" : 6
+	},
+	{
+		"idVinculo" : 9,
+		"idPropriedade" : 6,
+		"idProdutor" : 7
+	},
+	{
+		"idVinculo" : 10,
+		"idPropriedade" : 7,
+		"idProdutor" : 3
+	},
+	{
+		"idVinculo" : 11,
+		"idPropriedade" : 2,
+		"idProdutor" : 1
+	},
+	{
+		"idVinculo" : 12,
+		"idPropriedade" : 3,
+		"idProdutor" : 5
+	},
+	{
+		"idVinculo" : 13,
+		"idPropriedade" : 3,
+		"idProdutor" : 2
+	},
+	{
+		"idVinculo" : 14,
+		"idPropriedade" : 5,
+		"idProdutor" : 7
+	},
+	{
+		"idVinculo" : 15,
+		"idPropriedade" : 2,
+		"idProdutor" : 7
+	},
+	{
+		"idVinculo" : 16,
+		"idPropriedade" : 3,
+		"idProdutor" : 1
+	},
+	{
+		"idVinculo" : 17,
+		"idPropriedade" : 1,
+		"idProdutor" : 2
+	},
+	{
+		"idVinculo" : 18,
+		"idPropriedade" : 1,
+		"idProdutor" : 5
+	},
+	{
+		"idVinculo" : 19,
+		"idPropriedade" : 2,
+		"idProdutor" : 3
+	},
+	{
+		"idVinculo" : 20,
+		"idPropriedade" : 3,
+		"idProdutor" : 5
+	},
+	{
+		"idVinculo" : 21,
+		"idPropriedade" : 4,
+		"idProdutor" : 5
+	}
+]}

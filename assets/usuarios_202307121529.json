@@ -1,0 +1,35 @@
+{
+"usuarios": [
+	{
+		"idUsuario" : 1,
+		"nomeUsuario" : "Administrador",
+		"emailUsuario" : "administrado@email.com",
+		"senhaUsuario" : "root",
+		"descricaoCargo" : "Administrador da NicePlanet",
+		"industria" : "NicePlanet"
+	},
+	{
+		"idUsuario" : 2,
+		"nomeUsuario" : "Denys Fernades",
+		"emailUsuario" : "denysfernades@email.com",
+		"senhaUsuario" : "coxinha123",
+		"descricaoCargo" : "Desenvolvedor Mobile",
+		"industria" : "NicePlanet"
+	},
+	{
+		"idUsuario" : 3,
+		"nomeUsuario" : "Pedro Paulo",
+		"emailUsuario" : "pedropaulo@email.com",
+		"senhaUsuario" : "pastelDeFlango",
+		"descricaoCargo" : null,
+		"industria" : "Frigorífico 1"
+	},
+	{
+		"idUsuario" : 4,
+		"nomeUsuario" : "Natanna Rocha",
+		"emailUsuario" : "natannarocha@email.com",
+		"senhaUsuario" : null,
+		"descricaoCargo" : "Empacotadora",
+		"industria" : "Curtume 1"
+	}
+]}

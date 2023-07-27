@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mysql1/mysql1.dart';
-import 'package:teste_mobile_leonardo_carvalho/src/repositories/produtor_repository.dart';
+import 'package:teste_mobile_leonardo_carvalho/src/login_page.dart';
 
 void main() async{
 
-  //runApp(const MyApp());
+  runApp(const MyApp());
 }
 
 
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoginPage(),//const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }

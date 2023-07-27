@@ -9,23 +9,26 @@ class ProdutorRepository{
   final url = 'assets/produtores.json';
 
   Future<List<ProdutorModel>> fetchProdutor() async {
-
-    // Busca e armazena o conteudo do arquivo JSON
-    String jsonFile = await rootBundle.loadString(url);
-
-    // Tranformando o arquivo de JSON para MAP
-    final Map<String, dynamic> jsonData = json.decode(jsonFile);
-
-    /* Buscando dados contidos no MAP passando a Key('produtores') para poder ter acesso aos
-       dados array e armazenando eles em uma lista */
-    List<dynamic> produtoresList = jsonData['produtores'];
-
     List<ProdutorModel> produtores = [];
 
-    // populando a lista 'produtores' com os dados obtidos na 'list'
-    for (var json in produtoresList) {
-      final produtor = ProdutorModel.fromJson(json);
-      produtores.add(produtor);
+    try{
+      // Busca e armazena o conteudo do arquivo JSON
+      String jsonFile = await rootBundle.loadString(url);
+
+      // Tranformando o arquivo de JSON para MAP
+      final Map<String, dynamic> jsonData = json.decode(jsonFile);
+
+      /* Buscando dados contidos no MAP passando a Key('produtores') para poder ter acesso aos
+       dados array e armazenando eles em uma lista */
+      List<dynamic> list = jsonData['produtores'];
+
+      // populando a lista 'produtores' com os dados obtidos na 'list'
+      for (var json in list) {
+        final produtor = ProdutorModel.fromJson(json);
+        produtores.add(produtor);
+      }
+    }catch (e){
+      throw("[ERRO] -> falha ao buscar os dados dos PRODUTORES" , e);
     }
 
     return produtores;

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:teste_mobile_leonardo_carvalho/src/models/usuario_model.dart';
 import 'package:teste_mobile_leonardo_carvalho/src/repositories/usuario_repository.dart';
 
@@ -5,23 +6,15 @@ class LoginPageController{
   final usuarioRepository = UsuarioRepository();
 
 
-  login(String email, String senha) async {
+  Future login(BuildContext context,String email, String senha) async {
 
-    try{
-      final List<UsuarioModel> listaUsuario = await usuarioRepository.fetchUsuario();
+    final List<UsuarioModel> listaUsuario = await usuarioRepository.fetchUsuario();
 
-      for(var usuario in listaUsuario){
-        if(usuario.emailUsuario == email && usuario.senhaUsuario == senha){
-          print('usuario logado');
-          return;
-        }else{
-          print(email);
-          print(senha);
-          return;
-        }
+    for(var usuario in listaUsuario){
+      if(usuario.emailUsuario == email && usuario.senhaUsuario == senha){
+        Navigator.pushReplacementNamed(context, '/home');
+        return;
       }
-    }catch (e){
-      throw("Usuário nao encontrado", e);
     }
 
   }

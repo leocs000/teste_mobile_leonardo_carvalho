@@ -12,14 +12,15 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _senhaController = TextEditingController();
 
-  String email = '';
-  String senha = '';
-
-  login(){
+  login(context){
     LoginPageController loginController = LoginPageController();
-    email = _emailController.text;
-    senha = _senhaController.text;
-    loginController.login(email, senha);
+
+    try{
+      loginController.login(context, _emailController.text, _senhaController.text);
+    }catch (e){
+      print(e);
+    }
+
   }
 
   @override
@@ -51,10 +52,20 @@ class _LoginPageState extends State<LoginPage> {
               ),
               SizedBox(height: 15),
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red,
+                  fixedSize: Size(200, 50),
+                  elevation: 0,
+                ),
                 onPressed: () {
-                  login();
+                  login(context);
                 },
-                  child: Text('Entrar')
+                child: Text(
+                  'Entrar',
+                   style: TextStyle(
+                     color: Colors.white,
+                   ),
+                ),
 
               ),
             ],

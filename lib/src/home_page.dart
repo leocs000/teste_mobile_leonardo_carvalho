@@ -61,15 +61,22 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.amber,
-        title: Text('leonardo'),
+        backgroundColor: Colors.green,
+        title: Center(child: Text('Todas propriedades', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),)),
       ),
       backgroundColor: Color(0xffffffff),
-      body:  AnimatedBuilder(
-        animation: controller.state,
-        builder: (context, child) {
-          return stateManagement(controller.state.value);
-        }
+      body:  Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxWidth: 500,
+          ),
+          child: AnimatedBuilder(
+            animation: controller.state,
+            builder: (context, child) {
+              return stateManagement(controller.state.value);
+            }
+          ),
+        ),
       ),
     );
   }

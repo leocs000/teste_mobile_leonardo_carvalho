@@ -12,11 +12,13 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _senhaController = TextEditingController();
 
+
   login(context){
     LoginPageController loginController = LoginPageController();
-
+    String email = _emailController.text;
+    String senha = _senhaController.text;
     try{
-      loginController.login(context, _emailController.text, _senhaController.text);
+      loginController.login(context, email, senha);
     }catch (e){
       print(e);
     }

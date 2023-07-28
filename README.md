@@ -1,6 +1,16 @@
-# teste_mobile_leonardo_carvalho
+# Projeto teste para vaga de Dev junior
 
-A new Flutter project.
+Este é um desafio proposto pela empresa Niceplanet para vaga de Desenvolvedor Mobile junior.
+
+## Como rodar o projeto:
+
+1. Execute o comando `git clone` para clonar o projeto.
+
+2. Defina o SDK path do Flutter no projeto. No Android Studio, vá para **File** -> **Settings...** -> **Languages & Frameworks** -> **Flutter**.
+
+3. Após realizar essas configurações, execute o comando `dart pub get` no terminal.
+
+Pronto! Agora é só executar o projeto.
 
 ## Getting Started
 
